@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multivac-web
+  labels:
+    app: multivac-web
+spec:
+  containers:
+  - name: multivac-web
+    image: multivac-web
+    command: ['python', 'manage.py', 'runserver']

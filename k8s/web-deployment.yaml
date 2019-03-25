@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multivac-web
+  labels:
+    app: multivac-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: multivac-web
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: multivac-web
+        image: mutlivac-web
+        ports:
+        - containerPort: 5000

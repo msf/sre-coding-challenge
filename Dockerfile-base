@@ -1,0 +1,5 @@
+FROM python:3-slim-stretch
+
+RUN pip install --upgrade pip setuptools && \
+    apt update && apt install -y build-essential && \
+    rm -r /root/.cache
