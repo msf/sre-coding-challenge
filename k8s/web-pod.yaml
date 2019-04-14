@@ -7,5 +7,5 @@ metadata:
 spec:
   containers:
   - name: multivac-web
-    image: multivac-web
-    command: ['python', 'manage.py', 'runserver']
+    image: m3thos/repo:multivac-web
+  restartPolicy: Always
