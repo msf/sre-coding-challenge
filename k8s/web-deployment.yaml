@@ -5,17 +5,17 @@ metadata:
   labels:
     app: multivac-web
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: multivac-web
   template:
     metadata:
       labels:
-        app: nginx
+        app: multivac-web
     spec:
       containers:
       - name: multivac-web
-        image: mutlivac-web
+        image: localhost:32000/multivac-web
         ports:
         - containerPort: 5000
