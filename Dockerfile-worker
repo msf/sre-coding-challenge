@@ -1,0 +1,3 @@
+FROM multivac
+
+CMD ["python", "/app/manage.py", "worker"]

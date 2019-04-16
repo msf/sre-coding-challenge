@@ -1,6 +1,7 @@
 FROM multivac
 
-RUN touch /app/.env
+WORKDIR /app
+RUN touch .env
 expose 5000
 
 CMD ["python", "/app/manage.py", "runserver"]
